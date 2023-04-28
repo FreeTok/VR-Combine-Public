@@ -8,14 +8,15 @@ using UnityEngine.Serialization;
 public class UniversalInteractor : MonoBehaviour
 {
     public bool passTasks;
-    public GameObject mesh;
+    [FormerlySerializedAs("mesh")] public Animator anim;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
         {
-            if (mesh)
+            if (anim)
             {
-                mesh.SetActive(false);
+                anim.SetTrigger("Triggered");
             }
         
             if (!passTasks) return;
