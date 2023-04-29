@@ -96,6 +96,11 @@ namespace _Scripts
         {
             Invoke(nameof(StartNewTask), timeToWaitBeforeStartNewTask);
         }
-    
+
+        public void RemoveGrabEvent()
+        {
+            
+            grab.selectEntered.RemoveAllListeners();
+        }
     }
 }
