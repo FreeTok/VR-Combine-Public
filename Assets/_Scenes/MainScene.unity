@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 52426519}
   - component: {fileID: 52426518}
   - component: {fileID: 52426520}
+  - component: {fileID: 52426521}
   m_Layer: 0
   m_Name: SmallDoorNoseLeft
   m_TagString: Untagged
@@ -549,9 +550,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 52426521}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -643,6 +644,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &52426521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52426516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &117655996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,7 +2566,7 @@ MonoBehaviour:
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
@@ -2570,7 +2585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478076466}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
@@ -2578,7 +2593,7 @@ MonoBehaviour:
   m_System: {fileID: 478076473}
   m_TurnSpeed: 60
   m_LeftHandTurnAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Hand Turn
       m_Type: 0
@@ -4308,6 +4323,7 @@ GameObject:
   - component: {fileID: 1001220643}
   - component: {fileID: 1001220642}
   - component: {fileID: 1001220644}
+  - component: {fileID: 1001220645}
   m_Layer: 0
   m_Name: DoorInsightNose
   m_TagString: Untagged
@@ -4427,9 +4443,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 1001220645}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4521,6 +4537,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1001220645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001220640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &1048357297
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,6 +5310,7 @@ GameObject:
   - component: {fileID: 1281817730}
   - component: {fileID: 1281817729}
   - component: {fileID: 1281817728}
+  - component: {fileID: 1281817731}
   m_Layer: 0
   m_Name: BoxHolder
   m_TagString: Untagged
@@ -5347,9 +5378,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 1281817731}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5493,6 +5524,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1281817731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281817726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &1286815757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5986,6 +6031,7 @@ GameObject:
   - component: {fileID: 1327648057}
   - component: {fileID: 1327648056}
   - component: {fileID: 1327648058}
+  - component: {fileID: 1327648059}
   m_Layer: 0
   m_Name: SmallDoorNoseRight
   m_TagString: Untagged
@@ -6035,7 +6081,7 @@ HingeJoint:
   m_UseLimits: 1
   m_Limits:
     min: -150
-    max: -15
+    max: -12.31
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -6105,9 +6151,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 1327648059}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6199,6 +6245,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1327648059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327648054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &1354898438
 GameObject:
   m_ObjectHideFlags: 0
@@ -7798,6 +7858,7 @@ GameObject:
   - component: {fileID: 1540572359}
   - component: {fileID: 1540572360}
   - component: {fileID: 1540572358}
+  - component: {fileID: 1540572361}
   m_Layer: 0
   m_Name: Kryshka
   m_TagString: Untagged
@@ -7865,9 +7926,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 1540572361}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7999,6 +8060,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756def67f714892448cc80f8b95ba2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1540572361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540572356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &1542146161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10074,6 +10149,7 @@ GameObject:
   - component: {fileID: 2045659630}
   - component: {fileID: 2045659631}
   - component: {fileID: 2045659629}
+  - component: {fileID: 2045659632}
   m_Layer: 0
   m_Name: Maslo
   m_TagString: Untagged
@@ -10142,9 +10218,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 523019764}
-        m_TargetAssemblyTypeName: _Scripts.TaskManager, Assembly-CSharp
-        m_MethodName: StartNewTaskWait
+      - m_Target: {fileID: 2045659632}
+        m_TargetAssemblyTypeName: UniversalInteractor, Assembly-CSharp
+        m_MethodName: NextTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10276,6 +10352,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756def67f714892448cc80f8b95ba2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2045659632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045659627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed269550724bad43b19b1c861b6e955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passTasks: 0
+  anim: {fileID: 0}
 --- !u!1 &2053826074
 GameObject:
   m_ObjectHideFlags: 0

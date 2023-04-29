@@ -30,4 +30,10 @@ public class UniversalInteractor : MonoBehaviour
             Destroy(this);
         }
     }
+
+    public void NextTask()
+    {
+        FindObjectOfType<TaskManager>().StartNewTaskWait();
+        Destroy(this);
+    }
 }
