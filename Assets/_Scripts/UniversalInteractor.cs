@@ -16,6 +16,11 @@ public class UniversalInteractor : MonoBehaviour
         {
             if (anim)
             {
+                foreach (var coll in anim.GetComponentsInChildren<Collider>())
+                {
+                    coll.enabled = false;
+                }
+                
                 anim.SetTrigger("Triggered");
             }
         
