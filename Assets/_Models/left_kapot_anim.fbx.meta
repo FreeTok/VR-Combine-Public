@@ -2,7 +2,13 @@ fileFormatVersion: 2
 guid: 8173a1012cfc2af4c9b7dec89d5d08a8
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -219974517389430372
+    second: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430.001|\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430.001Action"
+  - first:
+      74: -4195049146276550832
+    second: "\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430.001|\u0410\u0440\u043C\u0430\u0442\u0443\u0440\u0430.002Action"
   externalObjects: {}
   materials:
     materialImportMode: 2
