@@ -7,6 +7,7 @@ namespace _Scripts
     [Serializable]
     public struct TaskComponents
     {
+        [HideInInspector]
         public GameObject ticket;
         public Outline[] highlights;
         public GameObject[] triggers;
@@ -56,6 +57,8 @@ namespace _Scripts
         public float timeToWaitBeforeStartNewTask = 5;
 
         public GameObject canvasCompleted;
+        public GameObject[] tickets;
+
 
         private void Start()
         {
@@ -64,10 +67,15 @@ namespace _Scripts
 
         private void Initiate()
         {
-            foreach (var comp in comps)
+            for (int i = 0; i < comps.Length; i++)
             {
-                comp.SelectDeselect(false, true);
+                comps[i].ticket = tickets[i];
+                comps[i].SelectDeselect(false, true);
             }
+            //foreach (var comp in comps)
+            //{
+            //    comp.SelectDeselect(false, true);
+            //}
             
             lastTicket++;
             comps[lastTicket].SelectDeselect();
