@@ -36,13 +36,13 @@ namespace _Scripts
                 }
             }
 
-            if (grabs.Length > 0)
+            if (grabs.Length > 0 && !isCleaning)
             {
                 foreach (var grab in grabs)
                 {
                     if (!isSelecting)
                     {
-                        grab.selectEntered.RemoveAllListeners();
+                        grab.selectEntered = new SelectEnterEvent();
                     }
                 }
             }
@@ -63,6 +63,9 @@ namespace _Scripts
         private void Start()
         {
             Initiate();
+            StartNewTaskWait();
+            StartNewTaskWait();
+            StartNewTaskWait();
         }
 
         private void Initiate()
@@ -79,11 +82,12 @@ namespace _Scripts
             
             lastTicket++;
             comps[lastTicket].SelectDeselect();
-            
         }
 
         private void StartNewTask()
         {
+            if (lastTicket >= comps.Length) return;
+
             var canvas = Instantiate(canvasCompleted);
             canvas.SetActive(true);
             Destroy(canvas, 5f);
