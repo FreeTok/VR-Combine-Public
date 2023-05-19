@@ -36,11 +36,13 @@ namespace _Scripts
                 }
             }
 
-            if (grabs.Length > 0 && !isCleaning)
+            if (grabs.Length > 0)
             {
                 foreach (var grab in grabs)
                 {
-                    if (!isSelecting)
+                    grab.enabled = isSelecting;
+
+                    if (!isSelecting && !isCleaning)
                     {
                         grab.selectEntered = new SelectEnterEvent();
                     }
@@ -63,15 +65,13 @@ namespace _Scripts
         private void Start()
         {
             Initiate();
-            StartNewTaskWait();
-            StartNewTaskWait();
-            StartNewTaskWait();
         }
 
         private void Initiate()
         {
             for (int i = 0; i < comps.Length; i++)
             {
+                print(i);
                 comps[i].ticket = tickets[i];
                 comps[i].SelectDeselect(false, true);
             }
